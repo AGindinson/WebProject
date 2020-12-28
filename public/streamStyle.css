@@ -8,7 +8,7 @@ BODY {
     font-size: 45
 }
 
-.remoteVideo {
+.streamedVideo {
     width: 600px;
     height: 370px;
     border: 1px solid;

@@ -4,13 +4,15 @@
     </HEAD>
     <BODY>
         <h1 class="header" align="center">WATCHING</h1>
-        <div class="remoteVideo"></div>
+        <video class="remoteVideo"></video>
         <button class="button watching">WATCH STREAM</button>
         <br/><br/><br/><br/><br/>
         <div>
             <label class="id" allign="center">STREAM ID: </label>
             <input class="input" name="input"> 
         </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/watch.js"></script>
         <button class="button stream" onClick='location.href="stream.html"'>GO STREAM</button>
     </BODY>
 </HTML>
