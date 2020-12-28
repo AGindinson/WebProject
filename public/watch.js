@@ -1,11 +1,12 @@
 let peerConnection;
 let watchedStreamerId;
 const socket = io.connect(window.location.origin);
-const video = document.querySelector("remoteVideo");
+let hasStarted = false;
+const startButton = document.querySelector('watching');
+const video = document.getElementsByClassName("remoteVideo")[0];
 
 socket.on("offer", (id, description) => {
-    if (socket.id !== watchedStreamerId) return;
-  peerConnection = new RTCPeerConnection();
+    peerConnection = new RTCPeerConnection();
   peerConnection
     .setRemoteDescription(description)
     .then(() => peerConnection.createAnswer())
@@ -23,6 +24,12 @@ socket.on("offer", (id, description) => {
   };
 });
 
+function changeReadiness() {
+    hasStarted = true;
+    watchedStreamerId = document.querySelector('input').value;
+    socket.emit("watcher", socket.id, watchedStreamerId);
+}
+
 socket.on("candidate", (id, candidate) => {
   peerConnection
     .addIceCandidate(new RTCIceCandidate(candidate))
@@ -30,7 +37,7 @@ socket.on("candidate", (id, candidate) => {
 });
 
 socket.on("connect", () => {
-    socket.emit("watcher", watchedStreamerId);
+    socket.emit("info", socket.id, "Has started");
 });
 
 socket.on("broadcaster", () => {

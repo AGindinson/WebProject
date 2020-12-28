@@ -12,9 +12,7 @@
             <label for="videoSource">Video source: </label>
             <select id="videoSource"></select>
         </section>
-        <div class="window">
-            <video class="streamedVideo"></video>        
-        </div>
+        <video playsinline autoplay muted class="streamedVideo"></video>
         <button class="button cam">CAM</button>
         
         <button class="button desktop">DESKTOP</button>
@@ -24,8 +22,9 @@
         <div>
             <label class="id" allign="center">STREAM ID: </label>
             <input class="idOutput" disabled class="output" name="output" value="">
-        </div>        
+        </div>
         <button class="button watch" onClick='location.href="watch.html"'>GO WATCH</button>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/broadcast.js"></script>
     </BODY>
 </HTML>
-

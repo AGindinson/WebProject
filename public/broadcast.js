@@ -41,7 +41,7 @@ window.onunload = window.onbeforeunload = () => {
 };
 
 // Get camera and microphone
-const videoElement = document.querySelector("streamedVideo");
+const videoElement = document.getElementsByClassName("streamedVideo")[0];
 const audioSelect = document.querySelector("select#audioSource");
 const videoSelect = document.querySelector("select#videoSource");
 
