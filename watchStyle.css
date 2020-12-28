@@ -1,0 +1,47 @@
+BODY {
+    background-color: rgb(57, 0, 153);
+}
+
+.header {
+    font-family: 'Ubuntu', monospace;
+    color: rgb(255, 84, 0);
+    font-size: 45
+}
+
+.remoteVideo {
+    width: 600px;
+    height: 370px;
+    border: 1px solid;
+    background: rgb(158, 0, 89);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    margin-top: 30px;
+    padding: .8em 1.4em;
+    background: rgb(249, 199, 79);
+    border: none;
+    position: absolute;
+    color: rgb(255, 0, 84);
+    width: 12%;
+}
+
+.watching {
+    left: 44%   
+}
+
+.id {
+    margin-left: 40%;
+    color: rgb(249, 199, 79);
+}
+
+.idInput {
+    display: inline-block;
+}
+
+.stream {
+    right: 5%;
+    bottom: 4%; 
+    margin: 0;
+}

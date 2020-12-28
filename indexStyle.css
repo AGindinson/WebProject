@@ -1,0 +1,36 @@
+BODY {
+    background-color: rgb(57, 0, 153);
+}
+
+.header {
+    font-family: 'Ubuntu', monospace;
+    color: rgb(255, 84, 0);
+    font-size: 45
+}
+
+.icon {
+    background-image: url('video.png');
+    width: 472px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    margin-top: 30px;
+    padding: .8em 1.4em;
+    background: rgb(249, 199, 79);
+    border: none;
+    position: absolute;
+    color: rgb(255, 0, 84);
+}
+
+.stream {    
+    width: 12%;
+    left: 33%
+}
+
+.watch {
+    width: 12%;
+    left: 55%
+}
